@@ -306,6 +306,9 @@ the framework will dispatch the `windowClose` event.
 Save and load the primary window state (width, height, x, y, values and maximized status) automatically.
 The default value is `true`.
 
+### `modes.window.useLogicalPixels: boolean`
+Activates DPI-aware sizing based on the operating system's display scale factor if this option is set to `true`.
+
 ### `modes.window.extendUserAgentWith: string`
 Extends the default webview-specific user agent string with a custom suffix. If this value is not set,
 the webview sets the default user agent from the platform-specific rendering engine (i.e., WebKit on GNU/Linux).
@@ -334,6 +337,24 @@ Width of the chrome window.
 
 ### `modes.chrome.height: number`
 Height of the chrome window.
+
+### `modes.chrome.browserBinary: string`
+Set custom browser binary path under the chrome mode. If this field is specified, the framework will try to launch Chrome from there. 
+ If it fails, the framework will initiate the Chrome binary search as usual:
+
+```js
+// cross-platform
+"browserBinary": "/path/to/chrome/bin"
+
+// platform-specific path
+"browserBinaryLinux": "/usr/bin/google-chrome",
+"browserBinaryDarwin": "/Applications/Google Chrome.app",
+"browserBinaryWindows": "C:\\Programs\\Google Chrome\\chrome.exe"
+
+// cross-platform (with path constants)
+"browserBinary": "${NL_OSDATAPATH}/chrome/bin"
+"browserBinaryWindows": "${NL_OSDOWNLOADSPATH}/chrome.exe"
+```
 
 ### `modes.chrome.args: string`
 Additional command-line arguments for the Chrome process. Read more about chrome mode

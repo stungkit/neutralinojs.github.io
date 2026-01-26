@@ -5,6 +5,15 @@ toc_max_heading_level: 2
 
 ## Unreleased
 
+## v11.7.0
+
+### Bugfixes/improvements
+- Display the zipped binaries package size while downloading pre-built Neutralinojs binaries from GitHub releases.
+- Use the correct resources path for host projects
+- Skip patching the frontend library's main HTML file when it's defined as empty in the configuration
+- Improve local plugin testing commands implementations
+- Upgrading several project dependencies
+
 ## v11.6.0
 
 ### Core: Bundler

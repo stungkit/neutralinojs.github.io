@@ -5,6 +5,18 @@ toc_max_heading_level: 2
 
 ## Unreleased
 
+## v6.5.0
+
+### API: window
+- Export `window.setBorderless(borderless: boolean)`
+
+### TypeScript
+- Add missing `center` to `WindowPosOptions`
+- Use correct return type for `server.getMounts()`
+
+### Bugfixes/improvements
+- Improve updator API error messages
+
 ## v6.4.0
 
 ### API: storage

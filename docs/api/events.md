@@ -15,6 +15,11 @@ by the Neutralinojs server based on native state changes.
 | `windowClose`               | Occurs when the user closes the window.                 | `window` | `null`
 | `windowFocus`               | Occurs when the window gets focused.                 | `window` | `null`
 | `windowBlur`                | Occurs when the window focus state is gone.                 | `window` | `null`
+| `windowMinimize`            | Occurs when the window gets minimized.                 | `window` | `null`
+| `windowRestore`             | Occurs when the window gets restored from the minimized state.                 | `window` | `null`
+| `windowMaximize`            | Occurs when the window gets maximized.                 | `window` | `null`
+| `windowFullScreenEnter`     | Occurs when the window enters the full-screen mode.    | `window` | `null`
+| `windowFullScreenEnter`     | Occurs when the window leaves the full-screen mode.    | `window` | `null`
 | `serverOffline`             | Occurs when the Neutralino server is offline | `all` | `null`
 | `clientConnect`             | Occurs when a new client access the application.        | `all` | Total clients
 | `clientDisconnect`          | Occurs when a connected client leaves the application.  | `all` | Total clients

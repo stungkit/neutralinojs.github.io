@@ -5,6 +5,39 @@ toc_max_heading_level: 2
 
 ## Unreleased
 
+## v6.5.0
+
+### Core: events
+- New window events: `windowMinimize`, `windowRestore`, `windowMaximize`, `windowFullScreenEnter`, and `windowFullScreenExit`
+
+### API: window
+- Add `window.setBorderless(bool)` to toggle borderless mode while the Neutralinojs app is running.
+
+### Configuration
+- Add `modes.chrome.browserBinary` option to set custom browser binary path under the chrome mode. If this field is specified, the framework will try to launch Chrome from there. If it fails, the framework will initiate the Chrome binary search as usual:
+```js
+// cross-platform
+"browserBinary": "/path/to/chrome/bin"
+
+// platform-specific path
+"browserBinaryLinux": "/usr/bin/google-chrome",
+"browserBinaryDarwin": "/Applications/Google Chrome.app",
+"browserBinaryWindows": "C:\\Programs\\Google Chrome\\chrome.exe"
+
+// cross-platform (with path constants)
+"browserBinary": "${NL_OSDATAPATH}/chrome/bin"
+"browserBinaryWindows": "${NL_OSDOWNLOADSPATH}/chrome.exe"
+```
+- Add the `modes.window.useLogicalPixels: true|false` option to activate DPI-aware sizing based on the operating system's display scale factor.
+- Add extra path constants support (early versions only supported `${NL_PATH}`) for the extensions command: `${NL_OSDATAPATH}`, `${NL_OSCACHEPATH}`, ... All supported path constants use this format: `${NL_OS<name>PATH}` where `<name>` is any accepted parameter (uppercased) to the `os.getPath(name)` function:
+```js
+"commandLinux": "${NL_OSDOWNLOADSPATH}/extensionBinary --load"
+``` 
+
+### Improvements/bugfixes
+- Fix issues with filter extension handling of the file dialogs API on Linux
+- Fix tray icon disappearing issue on Windows
+
 ## v6.4.0
 
 ### API: storage

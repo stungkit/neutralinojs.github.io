@@ -143,6 +143,19 @@ await Neutralino.window.setAlwaysOnTop(true); // or setAlwaysOnTop();
 await Neutralino.window.setAlwaysOnTop(false);
 ```
 
+## window.setBorderless(borderless)
+Activates or deactivates the borderless mode. 
+
+### Parameters
+
+- `borderless` Boolean (optional): Says whether the borderless mode should be activated or not. The default value
+is `true`.
+
+```js
+await Neutralino.window.setBorderless(true); // or setBorderless();
+await Neutralino.window.setBorderless(false);
+```
+
 ## window.move(x, y)
 Moves the native window into given coordinates. Neutralinojs's cross-platform coordinate system starts from top-left corner of the screen.
 In other words, `x=0,y=0` point refers to the top-left corner of the device's main screen.

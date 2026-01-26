@@ -32,6 +32,9 @@ First, you need to define extensions you use in `neutralinojs.config.json` with 
 - `commandDarwin` String (optional): Extension startup command for macOS.
 - `commandWindows` String (optional): Extension startup command for Windows.
 
+Extension commands support path constants like `${NL_PATH}`, `${NL_OSDOWNLOADSPATH}`, etc. Path constants that begin with the `NL_OS` prefix use 
+the `${NL_OS<name>PATH}` format where `<name>` is any accepted parameter (uppercased) to the [`os.getPath(name)`](../api/os.md#osgetpathname) function.
+
 ## Enable the extensions feature
 
 The extensions API is disabled by default. Enable extensions by adding the following setting to your app config.
