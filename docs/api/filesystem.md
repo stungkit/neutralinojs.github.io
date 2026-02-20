@@ -399,7 +399,7 @@ console.log('Parts:', pathParts);
 ```
 
 ## filesystem.setPermissions(path, permissions, mode)
-This method sets the size of the window. Throws `NE_FS_UNLSTPR` if the framework can't update file permissions for the given path.
+Sets file permissions for a given path. Throws `NE_FS_UNLSTPR` if the framework can't update file permissions.
 
 ### Parameters
 - `path` String: Path.
