@@ -54,8 +54,13 @@ module.exports = {
           position: 'left',
         },
         {
-          to: 'docs/release-notes/framework',
+          href: 'https://github.com/neutralinojs/gsoc2026',
           label: 'Release Notes',
+          position: 'left',
+        },
+        {
+          to: 'docs/release-notes/framework',
+          label: 'GSoC 2026',
           position: 'left',
         },
         {
